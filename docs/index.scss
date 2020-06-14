@@ -1,0 +1,15 @@
+@import 'bulma';
+@import './highlight';
+
+.repo-url {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.3rem;
+  float: right;
+  color: $title-color;
+
+  svg {
+    height: $title-size;
+    margin-right: 0.3rem;
+  }
+}
