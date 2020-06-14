@@ -1,0 +1,43 @@
+{
+  "name": "bulma-tagsfield",
+  "version": "0.1.0",
+  "description": "A multi-line tags input control (tags field)",
+  "homepage": "https://github.com/vyachkonovalov/bulma-tagsfield",
+  "browser": "./src/tagsfield.js",
+  "scripts": {
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": {
+    "name": "Vyacheslav Konovalov",
+    "email": "vyachkonovalov@protonmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "bulma",
+    "extension",
+    "tags",
+    "input",
+    "field"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "autoprefixer": "^9.8.0",
+    "babel-loader": "^8.1.0",
+    "bulma": "^0.9.0",
+    "css-loader": "^3.5.3",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.8",
+    "sass-loader": "^8.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md"
+  ]
+}

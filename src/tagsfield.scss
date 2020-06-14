@@ -1,0 +1,60 @@
+@import "bulma/sass/utilities/_all.sass";
+@import "bulma/sass/base/_all.sass";
+@import "bulma/sass/form/shared.sass";
+@import "bulma/sass/form/tools.sass";
+@import "bulma/sass/form/input-textarea.sass";
+@import "bulma/sass/elements/tag.sass";
+
+// Vertical padding depends on $control-padding-vertical from bulma/sass/utilities/controls.sass
+$tagsfield-spacing-vertical: calc((0.5em - #{$control-border-width}) / 2);
+
+.tagsfield {
+  height: auto !important;
+  cursor: text;
+  padding-top: $tagsfield-spacing-vertical !important;
+  padding-bottom: $tagsfield-spacing-vertical !important;
+
+  // Each tag
+  > .control {
+    margin-right: $control-padding-vertical !important;
+    margin-top: $tagsfield-spacing-vertical !important;
+    margin-bottom: $tagsfield-spacing-vertical !important;
+    max-width: 100%;
+
+    .tags {
+      flex-wrap: nowrap;
+
+      .tag:first-child {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 2em;
+      }
+
+      .tag:nth-child(2) {
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  // The div with input and span[contenteditable]
+  > div:last-child {
+    flex-grow: 1;
+    max-width: 100%;
+    overflow: hidden;
+    margin: $tagsfield-spacing-vertical 0;
+
+    span[contenteditable] {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  // Only child
+  > div:first-child:nth-last-child(1) span[contenteditable] {
+    &:empty:after {
+      content: attr(placeholder);
+      color: $input-placeholder-color;
+    }
+  }
+}
