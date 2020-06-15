@@ -1,6 +1,6 @@
 {
   "name": "bulma-tagsfield",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A multi-line tags input control (tags field)",
   "homepage": "https://github.com/vyachkonovalov/bulma-tagsfield",
   "browser": "./src/tagsfield.js",

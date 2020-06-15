@@ -12,6 +12,13 @@ class Tagsfield {
     this.editable.addEventListener('focus', () => el.classList.add('is-focused'))
     this.editable.addEventListener('blur', () => el.classList.remove('is-focused'))
     this.editable.addEventListener('keydown', this.onKeyDown.bind(this))
+    this.editable.addEventListener('paste', event => {
+        event.preventDefault()
+        const text = event.clipboardData.getData('text/plain')
+        const tmp = document.createElement('div')
+        tmp.innerHTML = text
+        document.execCommand('insertHTML', false, tmp.textContent.trim())
+    })
 
     // Load tags from input.value
     this.input.value.split(',').filter(v => v.length > 0).forEach(v => this.addTag(v))
